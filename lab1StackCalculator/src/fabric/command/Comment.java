@@ -1,6 +1,9 @@
 package fabric.command;
 
-public class Comment implements Command
+import context.ProgramContext;
+
+public class CommentCommand implements Command
 {
-    
+    @Override
+    public void execute(ProgramContext context) { /* Ignore User comments */}
 }
