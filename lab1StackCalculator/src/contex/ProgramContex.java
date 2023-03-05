@@ -1,26 +1,26 @@
-package contex;
+package context;
 
 import javax.naming.NamingException;
 import java.util.HashMap;
 
-public class ProgramContex
+public class ProgramContext
 {
-    public HashMap<String, Object> _contexMap;
+    public HashMap<String, Object> _contextMap;
 
-    public ProgramContex()
-    { _contexMap = new HashMap<String, Object>(); }
+    public ProgramContext()
+    { _contextMap = new HashMap<>(); }
 
-    public HashMap<String, Object> addContex(String key, Object value)
+    public HashMap<String, Object> addContext(String key, Object value)
     {
-        _contexMap.put(key, value);
-        return _contexMap;
+        _contextMap.put(key, value);
+        return _contextMap;
     }
 
-    public Object lookupContex(String key) throws NamingException
+    public Object lookupContext(String key) throws NamingException
     {
-        Object object = _contexMap.get(key);
+        Object object = _contextMap.get(key);
         if (object == null)
-        { throw new NamingException(); }
+        { throw new NamingException("Undefined key: " + key + "\n\t\t" + "System could not find the context!\n\t\t"); }
         return object;
     }
 }
