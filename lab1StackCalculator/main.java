@@ -36,7 +36,6 @@ public class Main
         {
             Calculator calculator = new Calculator("commands.conf");
             calculator.calculate(inputStream);
-
         }
         catch (ExecutionCommandErrorException | FabricInternalErrorException | IOException ex)
         {
