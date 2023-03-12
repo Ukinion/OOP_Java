@@ -1,0 +1,20 @@
+Define A 9
+PUSH A
+Comment dad дялялялял
+Print
+Define b 3
+PUSH b
+/
+Print
+Define c 1
+PUSH c
+-
+Print
+Define d 4
+PUSH d
+*
+Define e 2
+PUSH e
+Print
++
+Print

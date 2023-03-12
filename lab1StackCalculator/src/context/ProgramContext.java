@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 public class ProgramContext
 {
-    public HashMap<String, Object> _contextMap;
+    private final HashMap<String, Object> _contextMap;
 
     public ProgramContext()
     { _contextMap = new HashMap<>(); }
@@ -19,8 +19,10 @@ public class ProgramContext
     public Object lookupContext(String key) throws NamingException
     {
         Object object = _contextMap.get(key);
+
         if (object == null)
         { throw new NamingException("Undefined key: " + key + "\n\t\t" + "System could not find the context!\n\t\t"); }
+
         return object;
     }
 }
